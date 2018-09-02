@@ -56,12 +56,11 @@ const processRequest = async requestPath => {
   const responsePath = [];
 
   for await (const ussdCode of requestPath) {
-    console.log('ussdCode: ', ussdCode);
     const req = await request(ussdCode);
     responsePath.push({ ...req });
   }
 
-  parser.on('data', null);
+  parser.on('data', () => {});
   await closeUSSD();
 
   return responsePath;
