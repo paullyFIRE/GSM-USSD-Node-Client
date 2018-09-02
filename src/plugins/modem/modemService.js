@@ -25,7 +25,12 @@ const modemService = async (fastify, options, next) => {
         responsePath
       });
 
-      logger.log('info', `Successful request - ${requestId}, ${requestTime}, ${responsePath}`);
+      logger.log(
+        'info',
+        `Successful request - ${requestId}, ${
+          responsePath[responsePath.length]['response']
+        }`
+      );
 
       resolve({
         requestId,
