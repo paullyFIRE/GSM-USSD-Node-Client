@@ -6,8 +6,8 @@ const {
 
 const code = (str, fn) => (str ? fn(str) : null);
 
-const encode = (str, encodeAs7bitGSM) => code
-const decode = (str, decodeAs7bitGSM) => code
+const encode = (str) => code(str, encodeAs7bitGSM);
+const decode = (str) => code(str, decodeAs7bitGSM);
 
 export {
    encode,
