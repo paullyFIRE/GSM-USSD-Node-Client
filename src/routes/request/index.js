@@ -20,7 +20,7 @@ const request = (route, fastify) =>
 
     const responseDialog = await fastify.runModemRequest(requestPath);
 
-    reply.send(`Thanks for the ${network} request. Here is the response:\n${responseDialog}`);
+    reply.send(responseDialog);
   });
 
 export default request;

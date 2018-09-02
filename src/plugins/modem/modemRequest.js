@@ -61,7 +61,8 @@ const processRequest = async requestPath => {
     responsePath.push({ ...req });
   }
 
-  console.log('responsePath: ', responsePath);
+  await closeUSSD();
+
   return responsePath;
 };
 
