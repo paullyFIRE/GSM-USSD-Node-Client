@@ -55,11 +55,12 @@ const processRequest = async requestPath => {
 
   for await (const ussdCode of requestPath) {
     const req = await request(ussdCode);
+    parser.removeAllListeners('data');
     console.log('pushing...', { ...req })
     responsePath.push({ ...req });
+    await setTimeout(() => {console.log('waited 1000')}, 1000)
   }
 
-  parser.removeAllListeners('data');
   await closeUSSD();
 
   return responsePath;
