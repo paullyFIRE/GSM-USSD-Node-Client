@@ -1,5 +1,7 @@
-import * as baseConfig from './config';
+import { PUSHER, NOTIFICATIONS, GENERAL } from './config';
 
 export default {
-  ...baseConfig
+  PUSHER,
+  ...NOTIFICATIONS,
+  ...GENERAL
 };
