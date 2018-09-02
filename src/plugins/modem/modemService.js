@@ -11,7 +11,6 @@ const modemService = async (fastify, options, next) => {
 
       await fastify.notifyBeginRequest({ requestId, requestTime, requestPath });
       // call modem and get answer
-      console.log('Calling process request')
       const responsePath = await processRequest(requestPath)
 
       // notify and return response

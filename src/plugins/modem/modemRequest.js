@@ -52,13 +52,13 @@ const request = async code =>
 
 const processRequest = async requestPath => {
   console.log('Starting to run modem process');
-  const responsePath = await Promise.all(
-    requestPath.map(async ussdCode => {
-      const req = await request(ussdCode);
-      console.log('req: ', req);
-      return { ...req };
-    })
-  );
+  const responsePath = [];
+
+  for (const ussdCode in requestPath) {
+    const req = await request(ussdCode);
+    responsePath.push({ ...req });
+  }
+
   console.log('responsePath: ', responsePath);
   return responsePath;
 };
