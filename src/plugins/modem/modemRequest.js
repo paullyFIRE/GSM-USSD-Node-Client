@@ -60,8 +60,8 @@ const processRequest = async requestPath => {
     responsePath.push({ ...req });
   }
 
-  parser.on('data', () => {});
   await closeUSSD();
+  parser.on('data', () => {});
 
   return responsePath;
 };
