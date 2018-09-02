@@ -51,12 +51,11 @@ const request = async code =>
   });
 
 const processRequest = async requestPath => {
-  console.log('requestPath: ', requestPath);
-  console.log('Starting to run modem process');
   const responsePath = [];
 
   for await (const ussdCode of requestPath) {
     const req = await request(ussdCode);
+    console.log('pushing...', { ...req })
     responsePath.push({ ...req });
   }
 
