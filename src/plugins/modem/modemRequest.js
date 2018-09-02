@@ -60,7 +60,7 @@ const processRequest = async requestPath => {
     responsePath.push({ ...req });
   }
 
-  ser.removeAllListeners('data');
+  parser.removeAllListeners('data');
   await closeUSSD();
 
   return responsePath;
