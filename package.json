@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "nodemon --exec babel-node src/index.js",
     "build": "babel src/ -d dist/",
-    "start": "node dist/"
+    "start": "node dist/",
+    "serve": "babel -w src/ -d dist/ | nodemon dist/ --watch dist/"
   },
   "keywords": [],
   "author": "",
@@ -13,12 +14,14 @@
   "description": "",
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-stage-2": "^6.24.1",
     "nodemon": "^1.18.3"
   },
   "dependencies": {
     "@serialport/parser-readline": "^2.0.1",
+    "babel-runtime": "^6.26.0",
     "dotenv": "^6.0.0",
     "fastify": "^1.11.1",
     "fastify-helmet": "^2.1.0",
