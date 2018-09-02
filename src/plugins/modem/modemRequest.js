@@ -51,7 +51,7 @@ const request = async code =>
   });
 
 const processRequest = async requestPath => {
-   console.log('requestPath: ', requestPath);
+  console.log('requestPath: ', requestPath);
   console.log('Starting to run modem process');
   const responsePath = [];
 
@@ -61,6 +61,7 @@ const processRequest = async requestPath => {
     responsePath.push({ ...req });
   }
 
+  parser.on('data', null);
   await closeUSSD();
 
   return responsePath;
