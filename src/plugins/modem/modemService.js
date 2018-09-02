@@ -2,6 +2,7 @@ import fastifyPlugin from 'fastify-plugin';
 import uuid from 'uuid/v4';
 import Config from '../../config';
 import { processRequest } from './modemRequest';
+import logger from '../../lib/logger';
 
 const modemService = async (fastify, options, next) => {
   const modemRequest = async requestPath =>
@@ -23,6 +24,8 @@ const modemService = async (fastify, options, next) => {
         requestPath,
         responsePath
       });
+
+      logger.log('info', requestId, requestTime, responsePath);
 
       resolve({
         requestId,
