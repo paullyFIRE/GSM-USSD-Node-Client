@@ -3,6 +3,7 @@ Using these serial (AT-) commands, we can send and receive USSD requests and res
 
 API exposes /request route on port 3000.
 
-![The Setup](setup.JPG)
 
-![The Request (To Get Airtime Balance on MTN)](apiRequest.JPG)
+![The Request (To Get Airtime Balance on MTN)](apiRequest.png)
+
+![The Setup](setup.JPG)
