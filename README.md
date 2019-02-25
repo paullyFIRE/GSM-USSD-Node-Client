@@ -3,6 +3,7 @@ Using these serial (AT-) commands, we can send and receive USSD requests and res
 
 API exposes /request route on port 3000.
 
+Added support of sending log of request/responses to the client to a [Pusher (Pusher.com)](https://www.pusher.com) channel for external monitoring.
 
 ![The Request (To Get Airtime Balance on MTN)](apiRequest.png)
 
