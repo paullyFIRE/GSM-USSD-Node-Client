@@ -1,7 +1,8 @@
-Node API Clients to run on Raspberry PI clients with modem conntected.
+An fastify API server that can run on a Rasberry PI, and interface with a GSM modem through serial commands.
+Using these serial (AT-) commands, we can send and receive USSD requests and responses with the mobile carrier of the modem.
 
-With endpoints and function:
-   /request
-   Facilitate a new request to the modem and cell network,
-   returns dialog and results.
-   Logs modem-network request and responses.
+API exposes /request route on port 3000.
+
+![The Setup](setup.JPG)
+
+![The Request (To Get Airtime Balance on MTN)](apiRequest.JPG)
